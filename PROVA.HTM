@@ -1,7 +1,7 @@
 <style type="text/css">
 	body{
 		font-family: courier;
-		font-size: 10px;
+		font-size: 14px;
 		line-height: 0.9em;
 		background-image: url('plantilla.jpg');
 		width: 21.0cm;
@@ -22,7 +22,7 @@
 	#infoFactura{
 		position: absolute;
 		text-align: center;
-		top: 4.5cm;
+		top: 4.7cm;
 	}
 	#numFactura{
 		position: absolute;
@@ -40,7 +40,7 @@
 		position: absolute;
 		text-align: left;
 		width: 9.3cm;
-		top: 3.4cm;
+		top: 3.7cm;
 		left:10cm;
 	}
 	#infoClient p{
@@ -53,8 +53,15 @@
 		position: absolute;
 		width: 19cm;
 		height: 15.5cm;
-		top: 9.2cm;
+		top: 8.8cm;
 		left: 1cm;
+	}
+
+	.titolAlbara{
+		position: absolute;
+		font-weight: bold;
+
+		left: 2.5cm;
 	}
 
 	.referencia{
@@ -72,14 +79,14 @@
 		position: absolute;
 		text-align: right;
 		width: 2.3cm;
-		left:11cm;
+		left:10.7cm;
 
 	}
 
 	.preu{
 		position: absolute;
 		text-align: right;
-		left: 13.6cm;
+		left: 13.5cm;
 		width: 2.3cm;
 	}
 
@@ -92,8 +99,70 @@
 
 	/*PEU*/
 	#peu{
-		display: none;
+		display: block;
+		position: absolute;
+		text-align: right;
+		top: 25.6cm;
 	}
+
+	#baseImposable{
+		float: right;
+		position: absolute;
+		width: 2.7cm;
+		left: 9.7cm;
+	}
+
+	#iva{
+		float: right;
+		position: absolute;
+		width: 1.2cm;
+		left: 13cm;
+	}
+
+	#importIva{
+		float: right;
+		position: absolute;
+		width: 2cm;
+		left: 14.6cm;
+	}
+
+	#totalFactura{
+		float:right;
+		position: absolute;
+		width: 2.7cm;
+		left: 17cm;
+	}
+
+	#infoPagament{
+		position: absolute;
+		text-align: left;
+		top:1.45cm;
+		left: 3.2cm;
+	}
+
+	#formaPagament{
+		position: absolute;
+		width: 7.5cm;
+	}
+
+	#domiciliPagament{
+		position: absolute;
+		float: right;
+		width: 6.7cm;
+		height: 1.7cm;
+		left: 10cm;
+	}
+
+	#venciment{
+		position: absolute;
+		top:0.4cm;
+	}
+
+	#importTotal{
+		position: absolute;
+		top: 0.9cm;
+	}
+
 </style>
 
 <body>
@@ -112,17 +181,21 @@
 		</div>
 	</div>
 	<div id="cos">
-		<ul id="articles">
-			<li><p><span class="referencia">.</span>
-				<span class="descripcio">	ABONO PER CONJUNT DE PECES DEFECTUOSES</span>
-				<span class="quantitat">1</span><span class="preu">-1.693,77</span>
-				<span class="import">-1.693,77</span>
-			</p><br></li>
-			<li><p><span class="referencia">.</span>
-				<span class="descripcio">Ref. FACTURA 16162</span>
-				<span class="quantitat"></span><span class="preu"></span>
-				<span class="import"></span>
-			</p><br></li>
+		<ul id="albarans">
+			<li><p class="titolAlbara">Albarà Núm.:    <span class="albaraNum">4256</span>   de   <span class="dataAlbara">05/04/18</span></p><br>
+				<ul class="articles">
+					<li><p><span class="referencia">.</span>
+						<span class="descripcio">	ABONO PER CONJUNT DE PECES DEFECTUOSES</span>
+						<span class="quantitat">1</span><span class="preu">-1.693,77</span>
+						<span class="import">-1.693,77</span>
+					</p><br></li>
+					<li><p><span class="referencia">.</span>
+						<span class="descripcio">Ref. FACTURA 16162</span>
+						<span class="quantitat"></span><span class="preu"></span>
+						<span class="import"></span>
+					</p><br></li>
+				</ul>
+			</li>
 		</ul>	
 	</div>
 	<div id="peu">
@@ -136,7 +209,6 @@
 			<p id="formaPagament">DOMICILIACIÓ BANCARIA</p>
 			<div id="domiciliPagament">
 				<p id="domiciliNom">CAJA DE AHORROS DE CATALUÑA</p>
-				<br>
 				<p id="domiciliNum">2013 258 11 0201101527</p>
 			</div>
 			<br>
