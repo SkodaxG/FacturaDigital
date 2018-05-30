@@ -1,169 +1,174 @@
-<style type="text/css">
-	body{
-		font-family: courier;
-		font-size: 14px;
-		line-height: 0.9em;
-		background-image: url('plantilla.jpg');
-		width: 21.0cm;
-		height: 29.7cm;
-		background-repeat: no-repeat;
-		background-size: 21.0cm, 29.7cm;	
-	}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Factura Digital</title>
+	<style type="text/css">
+		body{
+			font-family: courier;
+			font-size: 14px;
+			line-height: 0.9em;
+			background-image: url('plantilla.jpg');
+			width: 21.0cm;
+			height: 29.7cm;
+			background-repeat: no-repeat;
+			background-size: 21.0cm, 29.7cm;	
+		}
 
-	ul{
-		list-style-type: none;
-		padding: 0;
-		margin: 10px 0;
-	}
+		ul{
+			list-style-type: none;
+			padding: 0;
+			margin: 10px 0;
+		}
 
 
-	/*CAPÇALERA*/
+		/*CAPÇALERA*/
 
-	#infoFactura{
-		position: absolute;
-		text-align: center;
-		top: 4.7cm;
-	}
-	#numFactura{
-		position: absolute;
-		left: 0.9cm;
-	}
-	#data{
-		position: absolute;
-		left: 3.4cm;
-	}
-	#numClient{
-		position: absolute;
-		left:6.6cm;
-	}
-	#infoClient {
-		position: absolute;
-		text-align: left;
-		width: 9.3cm;
-		top: 3.7cm;
-		left:10cm;
-	}
-	#infoClient p{
-		margin: 8px 0;
-	}
+		#infoFactura{
+			position: absolute;
+			text-align: center;
+			top: 4.7cm;
+		}
+		#numFactura{
+			position: absolute;
+			left: 0.9cm;
+		}
+		#data{
+			position: absolute;
+			left: 3.4cm;
+		}
+		#numClient{
+			position: absolute;
+			left:6.6cm;
+		}
+		#infoClient {
+			position: absolute;
+			text-align: left;
+			width: 9.3cm;
+			top: 3.7cm;
+			left:10cm;
+		}
+		#infoClient p{
+			margin: 8px 0;
+		}
 
-	/*COS*/
+		/*COS*/
 
-	#cos{
-		position: absolute;
-		width: 19cm;
-		height: 15.5cm;
-		top: 8.8cm;
-		left: 1cm;
-	}
+		#cos{
+			position: absolute;
+			width: 19cm;
+			height: 15.5cm;
+			top: 8.8cm;
+			left: 1cm;
+		}
 
-	.titolAlbara{
-		position: absolute;
-		font-weight: bold;
+		.titolAlbara{
+			position: absolute;
+			font-weight: bold;
 
-		left: 2.5cm;
-	}
+			left: 2.5cm;
+		}
 
-	.referencia{
-		position: absolute;
-		
-	}
+		.referencia{
+			position: absolute;
+			
+		}
 
-	.descripcio{
-		position: absolute;
-		left: 2.5cm;
-		width: 8.2cm;
-	}
+		.descripcio{
+			position: absolute;
+			left: 2.5cm;
+			width: 8.2cm;
+		}
 
-	.quantitat{
-		position: absolute;
-		text-align: right;
-		width: 2.3cm;
-		left:10.7cm;
+		.quantitat{
+			position: absolute;
+			text-align: right;
+			width: 2.3cm;
+			left:10.7cm;
 
-	}
+		}
 
-	.preu{
-		position: absolute;
-		text-align: right;
-		left: 13.5cm;
-		width: 2.3cm;
-	}
+		.preu{
+			position: absolute;
+			text-align: right;
+			left: 13.5cm;
+			width: 2.3cm;
+		}
 
-	.import{
-		position: absolute;
-		text-align: right;
-		left: 16.5cm;
-		width: 2.3cm;
-	}
+		.import{
+			position: absolute;
+			text-align: right;
+			left: 16.5cm;
+			width: 2.3cm;
+		}
 
-	/*PEU*/
-	#peu{
-		display: block;
-		position: absolute;
-		text-align: right;
-		top: 25.6cm;
-	}
+		/*PEU*/
+		#peu{
+			display: block;
+			position: absolute;
+			text-align: right;
+			top: 25.6cm;
+		}
 
-	#baseImposable{
-		float: right;
-		position: absolute;
-		width: 2.7cm;
-		left: 9.7cm;
-	}
+		#baseImposable{
+			float: right;
+			position: absolute;
+			width: 2.7cm;
+			left: 9.7cm;
+		}
 
-	#iva{
-		float: right;
-		position: absolute;
-		width: 1.2cm;
-		left: 13cm;
-	}
+		#iva{
+			float: right;
+			position: absolute;
+			width: 1.2cm;
+			left: 13cm;
+		}
 
-	#importIva{
-		float: right;
-		position: absolute;
-		width: 2cm;
-		left: 14.6cm;
-	}
+		#importIva{
+			float: right;
+			position: absolute;
+			width: 2cm;
+			left: 14.6cm;
+		}
 
-	#totalFactura{
-		float:right;
-		position: absolute;
-		width: 2.7cm;
-		left: 17cm;
-	}
+		#totalFactura{
+			float:right;
+			position: absolute;
+			width: 2.7cm;
+			left: 17cm;
+		}
 
-	#infoPagament{
-		position: absolute;
-		text-align: left;
-		top:1.45cm;
-		left: 3.2cm;
-	}
+		#infoPagament{
+			position: absolute;
+			text-align: left;
+			top:1.45cm;
+			left: 3.2cm;
+		}
 
-	#formaPagament{
-		position: absolute;
-		width: 7.5cm;
-	}
+		#formaPagament{
+			position: absolute;
+			width: 7.5cm;
+		}
 
-	#domiciliPagament{
-		position: absolute;
-		float: right;
-		width: 6.7cm;
-		height: 1.7cm;
-		left: 10cm;
-	}
+		#domiciliPagament{
+			position: absolute;
+			float: right;
+			width: 6.7cm;
+			height: 1.7cm;
+			left: 10cm;
+		}
 
-	#venciment{
-		position: absolute;
-		top:0.4cm;
-	}
+		#venciment{
+			position: absolute;
+			top:0.4cm;
+		}
 
-	#importTotal{
-		position: absolute;
-		top: 0.9cm;
-	}
+		#importTotal{
+			position: absolute;
+			top: 0.9cm;
+		}
 
-</style>
+	</style>
+</head>
 
 <body>
 	<div id="cabezera">
@@ -217,3 +222,4 @@
 		</div>	
 	</div>	
 </body>
+</html>
